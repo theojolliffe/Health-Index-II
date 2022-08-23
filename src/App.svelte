@@ -1,45 +1,53 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+	import Reports from "./Reports.svelte";
+
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank"> 
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank"> 
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
+<Reports/>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+	:global(body) {
+		font-family: 'Open Sans', sans-serif;
+		padding: 0px;
+		line-height: 2;
+		color: #323132;
+	}
+
+	main {
+		text-align: left;
+		padding: 1em;
+		max-width: 240px;
+		margin: 0 auto;
+		width: 640px
+	}
+
+	h1 {
+		font-size: 3em;
+		line-height: 1.5;
+	}
+
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+		}
+	}
+	div#visph {
+		background-color: #afcbd6;
+		color: #003C57;
+		height: 240px;
+		padding: 80px;
+		font-size: 3rem;
+		font-weight: 600;
+	}
+	span.back-to-top {
+		text-decoration: underline;
+		color: #206095;
+		cursor: pointer;
+	}
+	div#sf {
+		background-color: #F5F5F6;
+		padding: 15px;
+		font-size: 1.2rem;
+	}
 </style>
